@@ -1,3 +1,5 @@
+package nourriture;
+
 public class PlatChaud extends Plat {
     private double tempsDeCuisson;
 

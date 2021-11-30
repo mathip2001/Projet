@@ -1,3 +1,5 @@
+package gestion.fournisseur;
+
 public class Information {
     private Personne[] tab;
 

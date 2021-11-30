@@ -1,3 +1,5 @@
+package gestion.client;
+
 public class Personne {
     private final int id;
     private static int compteur = 0;

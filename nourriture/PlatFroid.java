@@ -1,3 +1,5 @@
+package nourriture;
+
 public class PlatFroid extends Plat {
     private double conservation;
 

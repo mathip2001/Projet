@@ -1,3 +1,5 @@
+package nourriture;
+
 public class Plat {
     private Aliment[] tabAliment;
     private int quantite;
@@ -15,7 +17,7 @@ public class Plat {
         if (nbAliment < tabAliment.length) {
             tabAliment[nbAliment] = p;
             nbAliment++;
-            System.out.println("Aliment ajoute avec succes");
+            System.out.println("nourriture.Aliment ajoute avec succes");
         } else {
             System.out.println("Impossible d'ajouter le plat");
         }

@@ -1,3 +1,5 @@
+package nourriture;
+
 public abstract class Aliment {
     private final int glucides;
     private final int lipides;

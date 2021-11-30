@@ -1,3 +1,5 @@
+package nourriture;
+
 public  class Menu {
     private Entree entree;
     private Plat plat;
