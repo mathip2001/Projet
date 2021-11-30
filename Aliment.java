@@ -10,8 +10,10 @@ public abstract class Aliment {
        this.lipides = lipides;
        this.protides = protides;
        this.poids = poids;
-       this.prix = prix;
+       this.prix = prix; 
     }
+
+    //m
 
     //méthode pour changer le prix
 
