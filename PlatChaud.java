@@ -1,9 +1,18 @@
 public class PlatChaud extends Plat {
-    private double tempsDeCuisson;
+    private int tempsDeCuisson;
+    private int conservation;
 
-    public PlatChaud(Aliment []tabAliment,int quantite,double tempsDeCuisson,double prix) {
-        super(tabAliment,quantite);
+    public PlatChaud(int quantite,int tempsDeCuisson,double prix,int conservation) {
+        super(quantite,prix);
         this.tempsDeCuisson = tempsDeCuisson;
+        this.conservation = conservation;
+    }
+
+    public String toString() {
+        return super.toString() 
+        + "C'est un plat chaud, il faut " + tempsDeCuisson 
+        + " minute(s) pour le rechauffer. "
+        + "Ce plat peut se conserver " + conservation + " jour(s). ";
     }
 
 

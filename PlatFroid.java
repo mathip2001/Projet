@@ -1,10 +1,14 @@
 public class PlatFroid extends Plat {
-    private double conservation;
+    private int conservation;
 
-    public PlatFroid(Aliment []tabAliment,int quantite,double conservation,double prix) {
-        super(tabAliment,quantite);
+    public PlatFroid(int quantite,int conservation,double prix) {
+        super(quantite,prix);
         this.conservation = conservation;
     }
 
-    /* creer methode plat froid */
+    public String toString() {
+        return super.toString() 
+        + "C'est un plat froid, aucun temps de cuisson est necessaire. "
+        + "Ce plat peut se conserver " + conservation + " jour(s). ";
+    }
 }
