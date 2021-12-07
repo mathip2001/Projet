@@ -1,13 +1,13 @@
 package gestion.client;
 
 public class Personne {
-    private final int id;
     private static int compteur = 0;
+    private final int id;
     private int solde;
-    private Fidelite fid;
+    private double distance;
 
     public Personne() {
-        solde = (int)(Math.random()*(100));
+        solde = (int) (Math.random() * (100));
         this.id = compteur;
         compteur++;
     }

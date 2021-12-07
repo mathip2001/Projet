@@ -7,14 +7,14 @@ public abstract class Aliment {
     private double poids;
     private double prix;
 
-    public Aliment(int glucides,int lipides,int protides,double poids,double prix) {
-       this.glucides = glucides;
-       this.lipides = lipides;
-       this.protides = protides;
-       this.poids = poids;
-       this.prix = prix;
+    public Aliment(int glucides, int lipides, int protides, double poids, double prix) {
+        this.glucides = glucides;
+        this.lipides = lipides;
+        this.protides = protides;
+        this.poids = poids;
+        this.prix = prix;
     }
-
+//    public  abstract int totalCalorique(){}
     //méthode pour changer le prix
 
 }
