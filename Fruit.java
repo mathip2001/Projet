@@ -1,4 +1,4 @@
-public class Fruit extends Dessert{
+public abstract class Fruit extends Dessert{
     private boolean antiOxydant;
 
     public Fruit(int quantite, double prix, boolean antiOxydant) {
@@ -6,6 +6,8 @@ public class Fruit extends Dessert{
         this.antiOxydant = antiOxydant;
     }
     
+    public abstract String accompagnement();
+
     public String toString() {
         if (antiOxydant) {
             return super.toString() + "Il contient un fruit. Il contient des anti-oxydants. ";

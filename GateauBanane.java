@@ -9,7 +9,11 @@ public class GateauBanane extends Fruit{
         this(100,0.5,false);
     }
 
+    public String accompagnement() {
+        return "Nous vous offrons la sauce chocolat. ";
+    }
+
     public String toString() {
-        return super.toString() + "C'est un gateau a la banane.";
+        return super.toString() + "C'est un gateau a la banane. " + accompagnement();
     }
 }

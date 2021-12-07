@@ -11,6 +11,22 @@ public class Entree {
         return "Entree de prix : " + prix + " euros, quantite : " + quantite + " g. ";
     }
 
+    public int getQuantite() {
+        return quantite;
+    }
+
+    public void setQuantite(int quantite) {
+        this.quantite = quantite;
+    }
+
+    public double getPrix() {
+        return prix;
+    }
+
+    public void setPrix(double prix) {
+        this.prix = prix;
+    }
+
     
     
 }

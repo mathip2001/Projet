@@ -1,4 +1,4 @@
-public class SaladeAvocat extends SansViande {
+public class SaladeAvocat extends SansViande implements Sauce{
     private boolean consistant;
 
     public SaladeAvocat(int quantite, double prix, int conservation) {
@@ -16,7 +16,7 @@ public class SaladeAvocat extends SansViande {
     }
 
     public String toString() {
-        String s = super.toString() + "C'est une salade avocat. ";
+        String s = super.toString() + "C'est une salade avocat. " + ajouterSauce();
         if (consistant) {
             s = s + "La portion est genereuse. ";
         } else {
@@ -32,4 +32,9 @@ public class SaladeAvocat extends SansViande {
     public void setConsistant(boolean consistant) {
         this.consistant = consistant;
     }
+    
+    public String ajouterSauce() {
+        return "Nous vous ajoutons la sauce qui accompagne la salade avocat. ";
+    }
+    
 }

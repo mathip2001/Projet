@@ -38,7 +38,7 @@ public class Main {
         System.out.println();
         System.out.println();
         
-        
+        /*
         System.out.println("Liste des Plats :");
 
         System.out.println("Liste des PlatChaud :");
@@ -59,7 +59,7 @@ public class Main {
         System.out.println(pp1);
         System.out.println();
         System.out.println();
-        
+        */
         
         System.out.println("Liste des Desserts :");
         
@@ -70,7 +70,6 @@ public class Main {
         System.out.println(y1);
         System.out.println();
         Yaourt y2 = new Yaourt(150, 0.5, false, 30);
-        y2.ajouterSucre();//proposer l'ajout de sucre
         System.out.println(y2);
         System.out.println();
 
@@ -89,7 +88,7 @@ public class Main {
         System.out.println();
         System.out.println();
         
-
+        /*
         Menu m1 = new Menu();
         m1.ajouterEntree(sv1,sa1,od1,q1);
         //vegetarien : sv1 (salade vegetarienne) / fitness : sa1 (salade avocat) 
@@ -102,6 +101,6 @@ public class Main {
         m1.ajouterDessert(y1, gb, tam, f);
         //vegetarien : y1 (yaourt) / fitness : gb (gateau a la banane)
         //prise de masse : tam (tarte aux myrtilles) / cheatmeal : f (fromage)
-        
+        */
     }
 }

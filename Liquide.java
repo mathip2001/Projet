@@ -4,7 +4,7 @@ public abstract class Liquide extends ProduitLaitier{
         super(quantite, prix, vitamineD);
     }
 
-    public abstract String ajouterSucre(); 
+    public abstract String accompagnement(); 
 
     public String toString() {
         return super.toString() + "Le produit laitier est liquide. ";
