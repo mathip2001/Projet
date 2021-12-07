@@ -1,7 +1,11 @@
 import gestion.client.Client;
 import gestion.client.Menu;
 import gestion.fournisseur.Fournisseur;
-import nourriture.*;
+import nourriture.entree.Entree;
+import nourriture.entree.exemple.OmeletteDinde;
+import nourriture.entree.exemple.Quiche;
+import nourriture.entree.exemple.SaladeAvocat;
+import nourriture.entree.exemple.SaladeVegetarienne;
 
 import java.util.ArrayList;
 import java.util.Scanner;
