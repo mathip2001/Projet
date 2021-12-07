@@ -1,3 +1,7 @@
+package nourriture.plat.exemple;
+
+import nourriture.plat.PlatFroid;
+
 public class Bagel extends PlatFroid {
     private final int glucides;
     private final int lipides;
@@ -11,14 +15,14 @@ public class Bagel extends PlatFroid {
     }
 
     public Bagel() {
-        this(300,2,4.0,30,60,45);
+        this(300, 2, 4.0, 30, 60, 45);
     }
 
     public String toString() {
-        return super.toString() + 
-        "Le plat est un bagel (glucides = " 
-        + glucides + " g, lipides = " + lipides + " g, protides = " + protides + " g). ";
+        return super.toString() +
+                "Le plat est un bagel (glucides = "
+                + glucides + " g, lipides = " + lipides + " g, protides = " + protides + " g). ";
     }
-    
+
 
 }

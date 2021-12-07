@@ -1,21 +1,22 @@
-public class OmeletteDinde extends AvecViande{
-    private boolean aRechauffer;
+package nourriture.entree.exemple;
 
-    public OmeletteDinde(int quantite,double prix,int kcal,boolean aRechauffer) {
+import nourriture.entree.AvecViande;
+
+public class Quiche extends AvecViande {
+    private final boolean aRechauffer;
+
+    public Quiche(int quantite, double prix, int kcal, boolean aRechauffer) {
         super(quantite, prix, kcal);
         this.aRechauffer = aRechauffer;
     }
 
-    public OmeletteDinde() {
-        this(300,5.0,400,true);
+    public Quiche() {
+        this(200, 3.0, 250, true);
     }
 
-    public void livrerChaud() {
-        aRechauffer = false;
-    }
 
     public String toString() {
-        String s = super.toString() + "C'est une omelette avec des morceaux de dindes. ";
+        String s = super.toString() + "C'est une quiche. ";
         if (aRechauffer) {
             s = s + "Il faut penser a rechauffer cette entree pour de meilleurs saveurs.";
         } else {

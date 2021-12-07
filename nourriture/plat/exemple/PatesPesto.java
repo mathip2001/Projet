@@ -1,4 +1,8 @@
-public class PatesPesto extends PlatFroid{
+package nourriture.plat.exemple;
+
+import nourriture.plat.PlatFroid;
+
+public class PatesPesto extends PlatFroid {
     private final int glucides;
     private final int lipides;
     private final int protides;
@@ -11,12 +15,12 @@ public class PatesPesto extends PlatFroid{
     }
 
     public PatesPesto() {
-            this(250,3,4.5,30,50,35);
+        this(250, 3, 4.5, 30, 50, 35);
     }
-    
+
     public String toString() {
-        return super.toString() + 
-        "Le plat est des pates avec du pesto (glucides = " + glucides + " g, lipides = " + lipides + " g, protides = " + protides + " g). ";
+        return super.toString() +
+                "Le plat est des pates avec du pesto (glucides = " + glucides + " g, lipides = " + lipides + " g, protides = " + protides + " g). ";
     }
 
 }

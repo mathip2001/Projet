@@ -1,3 +1,5 @@
+package nourriture.dessert;
+
 public abstract class ProduitLaitier extends Dessert {
     private int vitamineD;
 
@@ -11,5 +13,5 @@ public abstract class ProduitLaitier extends Dessert {
     public String toString() {
         return super.toString() + " C'est un produit laitier qui contient " + vitamineD + " g de vitamine D. ";
     }
-    
+
 }

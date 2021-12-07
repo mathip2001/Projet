@@ -1,12 +1,16 @@
-public class GateauBanane extends Fruit{
-    
+package nourriture.dessert.exemple;
+
+import nourriture.dessert.Fruit;
+
+public class GateauBanane extends Fruit {
+
 
     public GateauBanane(int quantite, double prix, boolean antiOxydant) {
         super(quantite, prix, antiOxydant);
     }
 
     public GateauBanane() {
-        this(100,0.5,false);
+        this(100, 0.5, false);
     }
 
     public String accompagnement() {

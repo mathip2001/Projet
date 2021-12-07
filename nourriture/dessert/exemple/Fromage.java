@@ -1,4 +1,8 @@
-public class Fromage extends Solide{
+package nourriture.dessert.exemple;
+
+import nourriture.dessert.Solide;
+
+public class Fromage extends Solide {
     private int matiereGrasse;
 
     public Fromage(int quantite, double prix, int vitamineD, int matiereGrasse) {
@@ -7,7 +11,7 @@ public class Fromage extends Solide{
     }
 
     public Fromage() {
-        this(50,2.50,30,30);
+        this(50, 2.50, 30, 30);
     }
 
     public String accompagnement() {
@@ -17,5 +21,7 @@ public class Fromage extends Solide{
     public String toString() {
         return super.toString() + "C'est du fromage compose de " + matiereGrasse + "g de matiere grasse. " + accompagnement();
     }
-    
+
 }
+
+

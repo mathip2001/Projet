@@ -1,8 +1,10 @@
+package nourriture.plat;
+
 public class Plat {
     private int quantite;
     private double prix;
 
-    public Plat (int quantite,double prix) { 
+    public Plat(int quantite, double prix) {
         this.quantite = quantite;
         this.prix = prix;
     }
@@ -26,5 +28,5 @@ public class Plat {
     public void setPrix(double prix) {
         this.prix = prix;
     }
-    
+
 }

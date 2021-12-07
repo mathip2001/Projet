@@ -1,14 +1,18 @@
-public class Entree {
-    protected int quantite;
+package nourriture.dessert;
+
+public abstract class Dessert {
+    private int quantite;
     private double prix;
 
-    public Entree(int quantite, double prix) {
+    public Dessert(int quantite, double prix) {
         this.quantite = quantite;
         this.prix = prix;
     }
 
+    public abstract String accompagnement();
+
     public String toString() {
-        return "Entree de prix : " + prix + " euros, quantite : " + quantite + " g. ";
+        return "Dessert de prix : " + prix + " euros, quantite : " + quantite + " g. ";
     }
 
     public int getQuantite() {
@@ -27,6 +31,5 @@ public class Entree {
         this.prix = prix;
     }
 
-    
-    
+
 }

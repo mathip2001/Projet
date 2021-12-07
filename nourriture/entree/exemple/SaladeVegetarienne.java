@@ -1,15 +1,19 @@
-public class SaladeVegetarienne extends SansViande{
+package nourriture.entree.exemple;
+
+import nourriture.entree.SansViande;
+
+public class SaladeVegetarienne extends SansViande {
     private boolean consistant;
 
-    public SaladeVegetarienne(int quantite, double prix, int conservation) {
-        super(quantite, prix, conservation);
+    public SaladeVegetarienne(int quantite, double prix, int conservation, int kcal) {
+        super(quantite, prix, conservation, kcal);
         this.consistant = false;
     }
 
     public SaladeVegetarienne() {
-        this(150,4.5,3);
+        this(150, 4.5, 3, 50);
     }
-    
+
     public void doublerLaPortion() {
         quantite = quantite * 2;
         consistant = true;
@@ -32,6 +36,6 @@ public class SaladeVegetarienne extends SansViande{
     public void setConsistant(boolean consistant) {
         this.consistant = consistant;
     }
-    
-    
+
+
 }

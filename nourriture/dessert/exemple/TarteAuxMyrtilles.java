@@ -1,3 +1,7 @@
+package nourriture.dessert.exemple;
+
+import nourriture.dessert.Fruit;
+
 public class TarteAuxMyrtilles extends Fruit {
 
     public TarteAuxMyrtilles(int quantite, double prix, boolean antiOxydant) {
@@ -5,7 +9,7 @@ public class TarteAuxMyrtilles extends Fruit {
     }
 
     public TarteAuxMyrtilles() {
-        this(150,3,true);
+        this(150, 3, true);
     }
 
     public String accompagnement() {
@@ -16,5 +20,5 @@ public class TarteAuxMyrtilles extends Fruit {
         return super.toString() + "C'est une tarte aux myrtilles. " + accompagnement();
     }
 
-    
+
 }

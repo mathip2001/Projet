@@ -1,11 +1,15 @@
-public class Yaourt extends Liquide{
+package nourriture.dessert.exemple;
 
-    public Yaourt(int quantite,double prix,boolean sucre,int vitamineD) {
-        super(quantite,prix,vitamineD);
+import nourriture.dessert.Liquide;
+
+public class Yaourt extends Liquide {
+
+    public Yaourt(int quantite, double prix, boolean sucre, int vitamineD) {
+        super(quantite, prix, vitamineD);
     }
 
     public Yaourt() {
-        this(150,0.5,false,30);
+        this(150, 0.5, false, 30);
     }
 
     public String accompagnement() {

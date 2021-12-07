@@ -1,15 +1,20 @@
-public class SaladeAvocat extends SansViande implements Sauce{
+package nourriture.entree.exemple;
+
+import nourriture.Sauce;
+import nourriture.entree.SansViande;
+
+public class SaladeAvocat extends SansViande implements Sauce {
     private boolean consistant;
 
-    public SaladeAvocat(int quantite, double prix, int conservation) {
-        super(quantite, prix, conservation);
+    public SaladeAvocat(int quantite, double prix, int conservation, int kcal) {
+        super(quantite, prix, conservation, kcal);
         this.consistant = false;
     }
 
     public SaladeAvocat() {
-        this(150,3.5,2);
+        this(150, 3.5, 2, 80);
     }
-    
+
     public void doublerLaPortion() {
         quantite = quantite * 2;
         consistant = true;
@@ -32,9 +37,9 @@ public class SaladeAvocat extends SansViande implements Sauce{
     public void setConsistant(boolean consistant) {
         this.consistant = consistant;
     }
-    
+
     public String ajouterSauce() {
         return "Nous vous ajoutons la sauce qui accompagne la salade avocat. ";
     }
-    
+
 }
