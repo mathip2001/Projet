@@ -17,13 +17,13 @@ public class Entree {
 
     public static void afficherArrayEntree(ArrayList<Entree> entreeArrayList) {
         for (int i = 0; i < entreeArrayList.size(); i++) {
-            System.out.println("********************************************************************************************************\n");
-            System.out.println("*                 Choix : " + i);
-            System.out.println("*                 Nom :  " + entreeArrayList.get(i).getName());
-            System.out.println("*                 Prix :  " + entreeArrayList.get(i).getPrix());
-            System.out.println("*                 Quantite : " + entreeArrayList.get(i).getQuantite());
-            System.out.println("*" + entreeArrayList.get(i).description + entreeArrayList.get(i).getKcal() + "kcal");
-            System.out.println("********************************************************************************************************\n");
+            System.out.println("**********************************************************************************************************************\n");
+            System.out.println("                 Choix : " + i);
+            System.out.println("                 Nom :  " + entreeArrayList.get(i).getName());
+            System.out.println("                 Prix :  " + entreeArrayList.get(i).getPrix());
+            System.out.println("                 Quantite : " + entreeArrayList.get(i).getQuantite());
+            System.out.println(entreeArrayList.get(i).getDescription() + entreeArrayList.get(i).getKcal() + "kcal");
+            System.out.println("**********************************************************************************************************************\n");
         }
     }
 
