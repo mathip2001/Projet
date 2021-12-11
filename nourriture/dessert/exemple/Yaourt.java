@@ -4,12 +4,12 @@ import nourriture.dessert.Liquide;
 
 public class Yaourt extends Liquide {
 
-    public Yaourt(int quantite, double prix, boolean sucre, int vitamineD) {
+    public Yaourt(int quantite, double prix,int vitamineD) {
         super(quantite, prix, vitamineD);
     }
 
     public Yaourt() {
-        this(150, 0.5, false, 30);
+        this(150, 0.5, 30);
     }
 
     public String accompagnement() {
