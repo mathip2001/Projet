@@ -1,52 +1,43 @@
 package gestion.client;
 
-import java.util.ArrayList;
-
 public class Client {
     private int client_id;
     private String client_name;
     private int nombre_achat;
-    private int item_num;
+    private Statut statut = Statut.BRONZE;
 
-    public void addCustomerDetails(Client c) {
-        this.client_name = c.client_name;
-        this.item_num = c.item_num;
-        this.nombre_achat = c.nombre_achat;
+
+    private int discount;
+
+    public Client(String name, int nombreAchat) {
+        this.client_name = name;
+        this.nombre_achat = nombreAchat;
     }
 
-    public void displayClientBill(ArrayList<Client> clientArrayList, String clientName, ArrayList<Menu> menuArrayList) {
-        float total = 0;
-        float discount = 0;
-        for (Client c : clientArrayList) {
-            if (c.getClient_name().equals(clientName)) {
-                System.out.println("--------------------------------------");
-                System.out.println("Client Id:" + c.getClient_id());
-                System.out.println("Client Name:" + c.getClient_name());
-                System.out.println("Nombre achat:" + c.getNombre_achat());
-                System.out.println("--------------------------------------");
-            }
-            for (Menu menu : menuArrayList) {
-                if (menu.getItemNum() == c.item_num) {
-                    total += c.nombre_achat * menu.getItemPrice();
-                }
-            }
+
+    public Client(String name) {
+        this(name, 0);
+    }
+
+    public Statut getStatut() {
+        if (nombre_achat > 5) {
+            statut = Statut.SILVER;
+            discount = 5;
         }
-        System.out.println("Facture avant reduction = " + total);
+        if (nombre_achat > 5 && nombre_achat < 20) {
+            statut = Statut.GOLD;
+            discount = 10;
 
-        if (total < 200) {
-            discount = (total * 15) / 100;
-        } else {
-            if (total >= 200 && total < 700) {
-                discount = (total * 25) / 100;
-            } else {
-                if (total > 700) {
-                    discount = (total * 50) / 100;
-                }
-            }
         }
-        System.out.println("Facture après reduction = " + (total - discount));
-
-
+        if (nombre_achat > 20 && nombre_achat < 50) {
+            statut = Statut.DIAMOND;
+            discount = 20;
+        }
+        if (nombre_achat > 50) {
+            statut = Statut.PLATINE;
+            discount = 30;
+        }
+        return statut;
     }
 
     public int getClient_id() {
@@ -69,16 +60,13 @@ public class Client {
         return nombre_achat;
     }
 
-    public void setNombre_achat(int nombre_achat) {
-        this.nombre_achat = nombre_achat;
+    public void updateNombreAchat(int nombre_achat) {
+        this.nombre_achat = this.nombre_achat + nombre_achat;
+        statut = getStatut();
     }
 
-    public int getItem_num() {
-        return item_num;
-    }
-
-    public void setItem_num(int item_num) {
-        this.item_num = item_num;
+    public int getDiscount() {
+        return discount;
     }
 
     @Override
@@ -89,4 +77,7 @@ public class Client {
                 ", nombre_achat=" + nombre_achat +
                 '}';
     }
+
+
+    enum Statut {BRONZE, SILVER, GOLD, DIAMOND, PLATINE}
 }
