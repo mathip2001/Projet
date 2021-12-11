@@ -19,7 +19,7 @@ public class Plat {
             System.out.println("                 Choix : " + i);
             System.out.println("                 Nom :  " + platArrayList.get(i).getName());
             System.out.println("                 Prix :  " + platArrayList.get(i).getPrix());
-            System.out.println("                 Quantite : " + platArrayList.get(i).getQuantite());
+            System.out.println("                 Quantite : " + platArrayList.get(i).getQuantite() + " g");
             System.out.println(platArrayList.get(i).getDescription());
             System.out.println("**********************************************************************************************************************\n");
         }

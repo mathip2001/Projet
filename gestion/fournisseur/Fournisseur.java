@@ -5,6 +5,9 @@ import gestion.client.Client;
 import java.util.ArrayList;
 
 public class Fournisseur {
+    private static Fournisseur instance;
+
+
     private static int nbClient = 0;
 
 
@@ -15,7 +18,7 @@ public class Fournisseur {
     private String fournisseurAdress;
     private float turnover = 0;
 
-    public Fournisseur(String fournisseurName, String fournisseurPhone, String fournisseurMail, String fournisseurAdress) {
+    private Fournisseur(String fournisseurName, String fournisseurPhone, String fournisseurMail, String fournisseurAdress) {
         this.fournisseurName = fournisseurName;
         this.fournisseurPhone = fournisseurPhone;
         this.fournisseurMail = fournisseurMail;
@@ -24,8 +27,15 @@ public class Fournisseur {
         nbClient++;
     }
 
-    public Fournisseur() {
+    private Fournisseur() {
         this("No name", "No phone", "No mail", "No address");
+    }
+
+    public static Fournisseur getInstance(String fournisseurName, String fournisseurPhone, String fournisseurMail, String fournisseurAdress) {
+        if (instance == null) {
+            instance = new Fournisseur(fournisseurName, fournisseurPhone, fournisseurMail, fournisseurAdress);
+        }
+        return instance;
     }
 
     public void addTabClient(String c) {

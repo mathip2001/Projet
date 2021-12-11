@@ -21,7 +21,7 @@ public class Entree {
             System.out.println("                 Choix : " + i);
             System.out.println("                 Nom :  " + entreeArrayList.get(i).getName());
             System.out.println("                 Prix :  " + entreeArrayList.get(i).getPrix());
-            System.out.println("                 Quantite : " + entreeArrayList.get(i).getQuantite());
+            System.out.println("                 Quantite : " + entreeArrayList.get(i).getQuantite() + " g");
             System.out.println(entreeArrayList.get(i).getDescription() + entreeArrayList.get(i).getKcal() + "kcal");
             System.out.println("**********************************************************************************************************************\n");
         }

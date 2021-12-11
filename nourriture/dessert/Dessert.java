@@ -19,7 +19,7 @@ public abstract class Dessert {
             System.out.println("                 Choix : " + i);
             System.out.println("                 Nom :  " + dessertArrayList.get(i).getName());
             System.out.println("                 Prix :  " + dessertArrayList.get(i).getPrix());
-            System.out.println("                 Quantite : " + dessertArrayList.get(i).getQuantite());
+            System.out.println("                 Quantite : " + dessertArrayList.get(i).getQuantite() + " g");
             System.out.println(dessertArrayList.get(i).getDescription());
             System.out.println("**********************************************************************************************************************\n");
         }

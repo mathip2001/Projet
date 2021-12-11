@@ -29,7 +29,7 @@ public class Main {
         ArrayList<Entree> entreeDisponible = new ArrayList<Entree>();
         ArrayList<Plat> platDisponible = new ArrayList<Plat>();
         ArrayList<Dessert> dessertsDisponible = new ArrayList<Dessert>();
-        Fournisseur fournisseur = new Fournisseur();
+        Fournisseur fournisseur = Fournisseur.getInstance("Carrefour", "0123456789", "carrefour@gmail.com", "Jussieu");
 
         initElementAvailable(entreeDisponible, platDisponible, dessertsDisponible);
 
