@@ -103,14 +103,14 @@ public class Display {
         for (Client c : clientArrayList) {
             if (c.getClient_name().equals(clientName)) {
                 System.out.print("***************************************************************************************************************************\n");
-                System.out.println("Vous avez le statut " + c.getStatut() + " vous avez droit a " + c.getDiscount() + "% de réduction");
+                System.out.println("Vous avez le statut " + c.getStatut() + " vous avez droit a " + c.getDiscount() + "% de reduction");
                 System.out.print("***************************************************************************************************************************\n");
                 discount = c.getDiscount();
             }
 
         }
         total = (total - total * (discount / 100));
-        System.out.println("Somme à regler = " + total);
+        System.out.println("Somme a regler = " + total);
         displayQuote("1. Proceed to payment");
         return total;
     }

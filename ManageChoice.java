@@ -40,7 +40,7 @@ public class ManageChoice extends Thread {
         try {
             numScreen = Integer.parseInt(i);
         } catch (Exception e) {
-            System.out.println("Aurevoir");
+            System.out.println("Au revoir");
         }
 
     }
