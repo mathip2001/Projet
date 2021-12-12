@@ -85,10 +85,15 @@ public class ManageChoice extends Thread {
                 display.displayMenuToAdd(tmpEmtree, tmpPlat, tmpDessert);
 
                 if (userInput.getUserChoice().equals("1")) {
-                    menuDisponible.add(new Menu(tmpEmtree, tmpPlat, tmpDessert));
+                    menuDisponible.add(new Menu(tmpEmtree, tmpPlat, tmpDessert,1));
                     display.displayQuote("Menu correctly add");
                 } else display.displayQuote("Menu not add");
                 display.displayQuote("Press 0 to go back");
+                break;
+            case 1112:
+                Menu.displayItems(menuDisponible);
+                display.displayQuote("Press 0 to go back");
+
                 break;
             case 112:
                 display.displayWindow("Show all client", "See profit");
@@ -109,7 +114,7 @@ public class ManageChoice extends Thread {
                 display.displayWindow("Menu predefinie ", "Menu personalisable");
                 break;
             case 1211:
-                display.displayTitle("This functionality will be availaible soon. Get back in few month :)");
+                display.displayQuote("This functionality will be availaible soon. Get back in few month :)");
                 display.displayQuote("Press 0 to go back");
                 break;
             case 1212:
@@ -121,7 +126,7 @@ public class ManageChoice extends Thread {
                     fournisseur.addTabClient(clientName);
                     display.displayQuote("Bienvenue pour la premiere fois " + clientName + " sur la meilleure boutique");
                 }
-                sleep(4000);
+                sleep(2000);
 
                 Entree.afficherArrayEntree(entreeDisponible);
                 display.displayQuote("Select a Entree in the list (Enter only one number plz)");
@@ -140,17 +145,18 @@ public class ManageChoice extends Thread {
                 display.displayQuote("How much do you want to buy?");
                 choice = userInput.getIndexValue(1000);
                 item = choice;
-                total = display.displayMenuToAddClient(tmpEmtree, tmpPlat, tmpDessert, choice);
+                total = display.displayMenuToAddClient(tmpEmtree, tmpPlat, tmpDessert, item);
                 if (userInput.getUserChoice().equals("1")) {
-                    panier.add(new Menu(tmpEmtree, tmpPlat, tmpDessert));
-                    display.displayQuote("Menu correctly add");
+                    panier.add(new Menu(tmpEmtree, tmpPlat, tmpDessert,item));
+                    display.displayQuote("Menu correctly add to your bag");
                 } else display.displayQuote("Menu not add to your bag");
                 display.displayQuote("Press 0 to go back");
                 break;
             case 122:
-                display.displayClientBill(clients, clientName, panier, total);
+                display.displayClientBill(clients, clientName, panier);
                 sleep(5000);
-                float price = display.displayClientWithReduction(clients, clientName, panier, total);
+                System.out.println(clientName);
+                float price = display.displayClientWithReduction(clients, clientName, panier);
                 if (userInput.getUserChoice().equals("1")) {
                     fournisseur.updateClientData(clientName, item);
                     fournisseur.updateTurnover(price);

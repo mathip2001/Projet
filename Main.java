@@ -40,7 +40,6 @@ public class Main {
             option = option + userInput.getUserChoice();
             if (option.endsWith("0")) {
                 option = option.substring(0, option.length() - 2);
-                System.out.println(option);
             }
             display.clearConsole();
             manageChoice.getToScreen(option);
