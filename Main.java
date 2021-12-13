@@ -42,8 +42,10 @@ public class Main {
                 option = option.substring(0, option.length() - 2);
             }
             display.clearConsole();
+            if(!option.equals("")){
             manageChoice.getToScreen(option);
-        }
+        }}
+        System.out.println("Au revoir");
     }
 
     private static void initElementAvailable

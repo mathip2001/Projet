@@ -61,9 +61,7 @@ public class Fournisseur {
         for (Client c : tabClient) {
             if (c.getClient_name().equals(name)) {
                 c.updateNombreAchat(nbAchat);
-
             }
-
         }
     }
 

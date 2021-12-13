@@ -30,12 +30,12 @@ public class Menu {
             System.out.println("Il n y a pas de menus disponible pour le moment");
         }
         for (Menu menu : menuArrayList) {
-            System.out.println("**********************************************************************************************************************\n");
-            System.out.println("Item Num:" + menu.getMenuNumber());
-            System.out.println("Entree :" + menu.entree.getName());
-            System.out.println("Plat :" + menu.plat.getName());
-            System.out.println("Dessert :" +menu.dessert.getName());
-            System.out.println("Item Price:" + menu.getMenuPrice());
+            System.out.println("**********************************************************************************************************************");
+            System.out.println("Item Num: " + menu.getMenuNumber());
+            System.out.println("Entree : " + menu.entree.getName());
+            System.out.println("Plat : " + menu.plat.getName());
+            System.out.println("Dessert : " +menu.dessert.getName());
+            System.out.println("Item Price: " + menu.getMenuPrice());
             System.out.println("**********************************************************************************************************************\n");
 
         }

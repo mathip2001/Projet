@@ -40,9 +40,8 @@ public class ManageChoice extends Thread {
         try {
             numScreen = Integer.parseInt(i);
         } catch (Exception e) {
-            System.out.println("Au revoir");
+            System.out.println("Entrer un nombre valide");
         }
-
     }
 
     public void iteration() throws InterruptedException {
@@ -158,8 +157,10 @@ public class ManageChoice extends Thread {
                 System.out.println(clientName);
                 float price = display.displayClientWithReduction(clients, clientName, panier);
                 if (userInput.getUserChoice().equals("1")) {
-                    fournisseur.updateClientData(clientName, item);
-                    fournisseur.updateTurnover(price);
+                    for(Menu menuPanier:panier) {
+                        fournisseur.updateClientData(clientName, menuPanier.getQuantite());
+                        fournisseur.updateTurnover(menuPanier.getMenuPrice());
+                    }
                     display.displayQuote("Congratulation you finish the transaction");
                 } else display.displayQuote("Dommage!");
                 display.displayQuote("Press 0 to go back");
