@@ -1,7 +1,8 @@
 package gestion.client;
 
 public class Client {
-    private int client_id;
+    private final int clientId;
+    private static int id = 0;
     private String client_name;
     private int nombre_achat;
     private Statut statut = Statut.BRONZE;
@@ -12,6 +13,8 @@ public class Client {
     public Client(String name, int nombreAchat) {
         this.client_name = name;
         this.nombre_achat = nombreAchat;
+        this.clientId = id;
+        id++;
     }
 
 
@@ -40,12 +43,8 @@ public class Client {
         return statut;
     }
 
-    public int getClient_id() {
-        return client_id;
-    }
-
-    public void setClient_id(int client_id) {
-        this.client_id = client_id;
+    public int getClientId() {
+        return clientId;
     }
 
     public String getClient_name() {
@@ -72,7 +71,7 @@ public class Client {
     @Override
     public String toString() {
         return "Client{" +
-                "client_id=" + client_id +
+                "client_id=" + clientId +
                 ", client_name='" + client_name + '\'' +
                 ", nombre_achat=" + nombre_achat +
                 '}';

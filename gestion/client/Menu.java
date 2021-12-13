@@ -9,63 +9,47 @@ import java.util.ArrayList;
 public class Menu {
     public static int menuTotalCreated = 0;
     private final int menuNumber;
-    private String itemName;
-    private int itemPrice;
-
-
+    private  int quantite;
     private Entree entree;
     private Plat plat;
     private Dessert dessert;
 
 
-    public Menu(Entree entree, Plat plat, Dessert dessert) {
+    public Menu(Entree entree, Plat plat, Dessert dessert,int quantite) {
         this.menuNumber = menuTotalCreated;
         this.entree = entree;
         this.plat = plat;
         this.dessert = dessert;
+        this.quantite = quantite;
         menuTotalCreated++;
     }
 
 
-    public static void displayItems(ArrayList<Menu> shopArrayList) {
-        if (shopArrayList.isEmpty()) {
+    public static void displayItems(ArrayList<Menu> menuArrayList) {
+        if (menuArrayList.isEmpty()) {
             System.out.println("Il n y a pas de menus disponible pour le moment");
         }
-        for (Menu menu : shopArrayList) {
-            System.out.println("--------------------------------------");
-            System.out.println("Item Num:" + menu.menuNumber);
-            System.out.println("Item Name:" + menu.itemName);
-            System.out.println("Item Price:" + menu.itemPrice);
-            System.out.println(menu.entree);
-            System.out.println(menu.plat);
-            System.out.println(menu.dessert);
-            System.out.println("--------------------------------------");
+        for (Menu menu : menuArrayList) {
+            System.out.println("**********************************************************************************************************************\n");
+            System.out.println("Item Num:" + menu.getMenuNumber());
+            System.out.println("Entree :" + menu.entree.getName());
+            System.out.println("Plat :" + menu.plat.getName());
+            System.out.println("Dessert :" +menu.dessert.getName());
+            System.out.println("Item Price:" + menu.getMenuPrice());
+            System.out.println("**********************************************************************************************************************\n");
 
         }
     }
-
-    public Menu addNewMenu(Menu m) {
-        return new Menu(m.getEntree(), m.getPlat(), m.getDessert());
-    }
-
     public int getItemNum() {
         return menuNumber;
     }
 
-    public String getItemName() {
-        return itemName;
+    public float getMenuPrice() {
+        return (float) (entree.getPrix()+plat.getPrix()+dessert.getPrix());
     }
 
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
-    }
-
-    public int getItemPrice() {
-        return itemPrice;
-    }
-
-    public void setItemPrice(int itemPrice) {
-        this.itemPrice = itemPrice;
+    public int getMenuNumber() {
+        return menuNumber;
     }
 
     public Entree getEntree() {
@@ -83,9 +67,14 @@ public class Menu {
     public void setPlat(Plat plat) {
         this.plat = plat;
     }
-
+    public int setQuantite() {
+        return quantite;
+    }
     public Dessert getDessert() {
         return dessert;
+    }
+    public int getQuantite() {
+        return quantite;
     }
 
     public void setDessert(Dessert dessert) {
