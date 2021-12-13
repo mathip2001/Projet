@@ -17,7 +17,7 @@ public class Display {
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
-    public static final String BLUE_BOLD_BRIGHT = "\033[1;94m";
+    public static final String GREEN_BOLD_BRIGHT =  "\033[1;92m";
     public static final String BLUE_UNDERLINED = "\033[4;34m";
 
     public void displayFournisseurTurnover(Fournisseur f) {
@@ -52,7 +52,7 @@ public class Display {
     public void displayQuote(String quote) {
 
 
-        System.out.println(BLUE_BOLD_BRIGHT + quote + ANSI_RESET);
+        System.out.println(GREEN_BOLD_BRIGHT + quote + ANSI_RESET);
 
 
     }
