@@ -18,7 +18,7 @@ public class Display {
     public static final String ANSI_CYAN = "\033[1;94m";
     public static final String ANSI_WHITE = "\u001B[37m";
     public static final String GREEN_BOLD_BRIGHT =  "\033[1;92m";
-    public static final String BLUE_UNDERLINED = "\033[4;34m";
+    public static final String BLUE_UNDERLINED = "\033[0;107m";
 
     public void displayFournisseurTurnover(Fournisseur f) {
         if (f.getTurnover() == 0) {
