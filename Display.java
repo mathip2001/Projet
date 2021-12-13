@@ -15,7 +15,7 @@ public class Display {
     public static final String ANSI_YELLOW = "\u001B[33m";
     public static final String ANSI_BLUE = "\u001B[34m";
     public static final String ANSI_PURPLE = "\u001B[35m";
-    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_CYAN = "\033[1;94m";
     public static final String ANSI_WHITE = "\u001B[37m";
     public static final String GREEN_BOLD_BRIGHT =  "\033[1;92m";
     public static final String BLUE_UNDERLINED = "\033[4;34m";
