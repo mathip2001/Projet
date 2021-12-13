@@ -124,6 +124,7 @@ public class ManageChoice extends Thread {
                 } else {
                     fournisseur.addTabClient(clientName);
                     display.displayQuote("Bienvenue pour la premiere fois " + clientName + " sur la meilleure boutique");
+                    panier.clear();
                 }
                 sleep(2000);
 
@@ -161,6 +162,7 @@ public class ManageChoice extends Thread {
                         fournisseur.updateClientData(clientName, menuPanier.getQuantite());
                         fournisseur.updateTurnover(menuPanier.getMenuPrice());
                     }
+                    panier.clear();
                     display.displayQuote("Congratulation you finish the transaction");
                 } else display.displayQuote("Dommage!");
                 display.displayQuote("Press 0 to go back");
